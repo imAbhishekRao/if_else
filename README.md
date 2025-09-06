@@ -1,8 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DateGenie
+
+DateGenie is a modern dating application built with Next.js, featuring Google OAuth authentication and a beautiful yellow-black theme.
+
+## Features
+
+- 🔐 Google OAuth Authentication
+- 📱 Mobile Number Login (Coming Soon)
+- 🎨 Beautiful Yellow & Black Theme
+- 📱 Responsive Design
+- ⚡ Built with Next.js 15 and TypeScript
+
+## Google OAuth Setup
+
+Before running the application, you need to set up Google OAuth:
+
+1. **Create a Google Cloud Project**
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select an existing one
+
+2. **Enable Google+ API**
+   - Navigate to "APIs & Services" > "Library"
+   - Search for "Google+ API" and enable it
+
+3. **Create OAuth Credentials**
+   - Go to "APIs & Services" > "Credentials"
+   - Click "Create Credentials" > "OAuth client ID"
+   - Choose "Web application"
+   - Add authorized redirect URIs:
+     - `http://localhost:3000/api/auth/callback/google` (for development)
+     - `https://yourdomain.com/api/auth/callback/google` (for production)
+
+4. **Create Environment Variables**
+   - Create a `.env.local` file in the root directory
+   - Add the following variables:
+   ```bash
+   GOOGLE_CLIENT_ID=your_google_client_id_here.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET=your_google_client_secret_here
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your_random_secret_key_here
+   ```
+   - Generate a random secret for `NEXTAUTH_SECRET`: `openssl rand -base64 32`
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and set up environment variables as described above.
+
+Then, run the development server:
 
 ```bash
 npm run dev
