@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",
+    "@next/env": "*",
     "googleapis": "^159.0.0",
     "next": "15.5.2",
     "next-auth": "^4.24.11",
