@@ -32,7 +32,7 @@ const handler = NextAuth({
         // Automatically send token to backend
         try {
           console.log('Sending token to backend automatically...')
-          const response = await fetch('http://192.168.29.58:8000/auth/google', {
+          const response = await fetch('https://dategenie.onrender.com/auth/google', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
