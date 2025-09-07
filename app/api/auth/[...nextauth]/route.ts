@@ -44,7 +44,9 @@ const handler = NextAuth({
           
           if (response.ok) {
             const backendResponse = await response.json()
-            console.log('Backend authentication successful:', backendResponse)
+            if (backendResponse.user['verified']){
+              
+            }
           } else {
             console.error('Backend authentication failed:', response.status, response.statusText)
           }
